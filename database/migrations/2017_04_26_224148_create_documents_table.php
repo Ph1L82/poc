@@ -15,7 +15,12 @@ class CreateDocumentsTable extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('provider_id')->unsigned();
+            $table->enum('type', ['boleta', 'factura'])->default('factura');
+            $table->date('issue')->nullable();
+            $table->date('expiration')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

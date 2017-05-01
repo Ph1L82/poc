@@ -16,10 +16,15 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('provider_id')->unsigned();
+            $table->integer('payment_id')->unsigned();
+            $table->string('description')->nullable();
             $table->integer('author')->unsigned();
             $table->integer('approved_by')->unsigned()->nullable();
             $table->timestamp('approved')->nullable();
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->foreign('provider_id')->references('id')->on('providers');
         });
     }
 

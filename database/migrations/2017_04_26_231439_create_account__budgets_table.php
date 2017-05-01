@@ -16,10 +16,14 @@ class CreateAccountBudgetsTable extends Migration
         Schema::create('account__budgets', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('account_id')->unsigned();
-            $table->integer('budgetid')->unsigned();
+            $table->integer('budget_id')->unsigned();
+            $table->double('assigned', 15, 2);
             $table->double('balance', 15, 2);
             $table->timestamps();
             $table->softDeletes();
+
+            $table->foreign('account_id')->references('id')->on('accounts');
+            $table->foreign('budget_id')->references('id')->on('budgets');
         });
     }
 

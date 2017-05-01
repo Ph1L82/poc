@@ -15,7 +15,12 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->integer('account_budget_id')->unsigned();
+            $table->integer('quantity')->default(1);
+            $table->double('cost', 15, 2);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

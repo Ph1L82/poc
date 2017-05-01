@@ -17,7 +17,9 @@ class CreateProvidersTable extends Migration
             $table->increments('id');
             $table->string('company_name')->unique();
             $table->string('rut')->unique();
-            $table->string('address');
+            $table->string('address')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

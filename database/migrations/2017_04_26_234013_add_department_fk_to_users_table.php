@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBudgetsTable extends Migration
+class AddDepartmentFkToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,7 @@ class CreateBudgetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('budgets', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('department_id')->unsigned();
-            $table->date('begins');
-            $table->date('ends');
-            $table->timestamps();
-            $table->softDeletes();
-
+        Schema::table('users', function (Blueprint $table) {
             $table->foreign('department_id')->references('id')->on('departments');
         });
     }
@@ -32,6 +25,8 @@ class CreateBudgetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('budgets');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropForeign('users_department_id_foreign');
+        });
     }
 }
