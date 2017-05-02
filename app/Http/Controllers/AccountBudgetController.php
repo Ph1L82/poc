@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace poc\Http\Controllers;
 
-use App\Account_Budget;
+use poc\Account_Budget;
 use Illuminate\Http\Request;
 
 class AccountBudgetController extends Controller
@@ -41,7 +41,7 @@ class AccountBudgetController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Account_Budget  $account_Budget
+     * @param  \poc\Account_Budget  $account_Budget
      * @return \Illuminate\Http\Response
      */
     public function show(Account_Budget $account_Budget)
@@ -52,7 +52,7 @@ class AccountBudgetController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Account_Budget  $account_Budget
+     * @param  \poc\Account_Budget  $account_Budget
      * @return \Illuminate\Http\Response
      */
     public function edit(Account_Budget $account_Budget)
@@ -64,7 +64,7 @@ class AccountBudgetController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Account_Budget  $account_Budget
+     * @param  \poc\Account_Budget  $account_Budget
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Account_Budget $account_Budget)
@@ -75,7 +75,7 @@ class AccountBudgetController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Account_Budget  $account_Budget
+     * @param  \poc\Account_Budget  $account_Budget
      * @return \Illuminate\Http\Response
      */
     public function destroy(Account_Budget $account_Budget)

@@ -20,7 +20,6 @@ class CreateBudgetsTable extends Migration
             $table->date('ends');
             $table->timestamps();
             $table->softDeletes();
-
             $table->foreign('department_id')->references('id')->on('departments');
         });
     }

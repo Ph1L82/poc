@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace poc\Http\Controllers;
 
-use App\Payment_Methods;
+use poc\Payment_Methods;
 use Illuminate\Http\Request;
 
 class PaymentMethodsController extends Controller
@@ -14,7 +14,7 @@ class PaymentMethodsController extends Controller
      */
     public function index()
     {
-        //
+        return Payment_Methods::all();
     }
 
     /**
@@ -41,7 +41,7 @@ class PaymentMethodsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Payment_Methods  $payment_Methods
+     * @param  \poc\Payment_Methods  $payment_Methods
      * @return \Illuminate\Http\Response
      */
     public function show(Payment_Methods $payment_Methods)
@@ -52,7 +52,7 @@ class PaymentMethodsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Payment_Methods  $payment_Methods
+     * @param  \poc\Payment_Methods  $payment_Methods
      * @return \Illuminate\Http\Response
      */
     public function edit(Payment_Methods $payment_Methods)
@@ -64,7 +64,7 @@ class PaymentMethodsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Payment_Methods  $payment_Methods
+     * @param  \poc\Payment_Methods  $payment_Methods
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Payment_Methods $payment_Methods)
@@ -75,7 +75,7 @@ class PaymentMethodsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Payment_Methods  $payment_Methods
+     * @param  \poc\Payment_Methods  $payment_Methods
      * @return \Illuminate\Http\Response
      */
     public function destroy(Payment_Methods $payment_Methods)

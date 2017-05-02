@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace poc\Http\Controllers;
 
-use App\Budgets;
+use poc\Budgets;
 use Illuminate\Http\Request;
 
 class BudgetsController extends Controller
@@ -14,7 +14,7 @@ class BudgetsController extends Controller
      */
     public function index()
     {
-        //
+        return Budgets::all();
     }
 
     /**
@@ -41,7 +41,7 @@ class BudgetsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Budgets  $budgets
+     * @param  \poc\Budgets  $budgets
      * @return \Illuminate\Http\Response
      */
     public function show(Budgets $budgets)
@@ -52,7 +52,7 @@ class BudgetsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Budgets  $budgets
+     * @param  \poc\Budgets  $budgets
      * @return \Illuminate\Http\Response
      */
     public function edit(Budgets $budgets)
@@ -64,7 +64,7 @@ class BudgetsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Budgets  $budgets
+     * @param  \poc\Budgets  $budgets
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Budgets $budgets)
@@ -75,7 +75,7 @@ class BudgetsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Budgets  $budgets
+     * @param  \poc\Budgets  $budgets
      * @return \Illuminate\Http\Response
      */
     public function destroy(Budgets $budgets)

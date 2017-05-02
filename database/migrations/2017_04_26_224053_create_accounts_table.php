@@ -17,7 +17,7 @@ class CreateAccountsTable extends Migration
             $table->increments('id');
             $table->integer('code');
             $table->string('name');
-            $table->enum('type',['gasto','activo fijo'])->default('gasto');            
+            $table->enum('type',['gasto','activo fijo'])->default('gasto');
             $table->timestamps();
             $table->softDeletes();
         });

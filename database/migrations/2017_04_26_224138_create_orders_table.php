@@ -25,6 +25,8 @@ class CreateOrdersTable extends Migration
             $table->softDeletes();
 
             $table->foreign('provider_id')->references('id')->on('providers');
+            $table->foreign('author')->references('id')->on('users');
+            $table->foreign('approved_by')->references('id')->on('users');
         });
     }
 

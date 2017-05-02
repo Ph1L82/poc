@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace poc\Http\Controllers;
 
-use App\Accounts;
+use poc\Accounts;
 use Illuminate\Http\Request;
 
 class AccountsController extends Controller
@@ -41,7 +41,7 @@ class AccountsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Accounts  $accounts
+     * @param  \poc\Accounts  $accounts
      * @return \Illuminate\Http\Response
      */
     public function show(Accounts $accounts)
@@ -52,7 +52,7 @@ class AccountsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Accounts  $accounts
+     * @param  \poc\Accounts  $accounts
      * @return \Illuminate\Http\Response
      */
     public function edit(Accounts $accounts)
@@ -64,7 +64,7 @@ class AccountsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Accounts  $accounts
+     * @param  \poc\Accounts  $accounts
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Accounts $accounts)
@@ -75,7 +75,7 @@ class AccountsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Accounts  $accounts
+     * @param  \poc\Accounts  $accounts
      * @return \Illuminate\Http\Response
      */
     public function destroy(Accounts $accounts)

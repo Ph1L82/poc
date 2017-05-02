@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace poc\Http\Controllers;
 
-use App\Companies;
+use poc\Companies;
 use Illuminate\Http\Request;
 
 class CompaniesController extends Controller
@@ -14,7 +14,7 @@ class CompaniesController extends Controller
      */
     public function index()
     {
-        //
+        return Companies::all();
     }
 
     /**
@@ -41,7 +41,7 @@ class CompaniesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Companies  $companies
+     * @param  \poc\Companies  $companies
      * @return \Illuminate\Http\Response
      */
     public function show(Companies $companies)
@@ -52,7 +52,7 @@ class CompaniesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Companies  $companies
+     * @param  \poc\Companies  $companies
      * @return \Illuminate\Http\Response
      */
     public function edit(Companies $companies)
@@ -64,7 +64,7 @@ class CompaniesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Companies  $companies
+     * @param  \poc\Companies  $companies
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Companies $companies)
@@ -75,7 +75,7 @@ class CompaniesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Companies  $companies
+     * @param  \poc\Companies  $companies
      * @return \Illuminate\Http\Response
      */
     public function destroy(Companies $companies)

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAccountBudgetsTable extends Migration
+class CreateAccountBudgetTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateAccountBudgetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('account__budgets', function (Blueprint $table) {
+        Schema::create('account__budget', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('account_id')->unsigned();
             $table->integer('budget_id')->unsigned();

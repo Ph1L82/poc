@@ -26,7 +26,7 @@ class AddCompanyFkToDepartmentsTable extends Migration
     public function down()
     {
         Schema::table('departments', function (Blueprint $table) {
-            $table->dropForeign('departments_company_id_foreign'); 
+            $table->dropForeign('departments_company_id_foreign');
         });
     }
 }

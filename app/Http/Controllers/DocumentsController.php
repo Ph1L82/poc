@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace poc\Http\Controllers;
 
-use App\Documents;
+use poc\Documents;
 use Illuminate\Http\Request;
 
 class DocumentsController extends Controller
@@ -14,7 +14,7 @@ class DocumentsController extends Controller
      */
     public function index()
     {
-        //
+        Documents::all();
     }
 
     /**
@@ -41,7 +41,7 @@ class DocumentsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Documents  $documents
+     * @param  \poc\Documents  $documents
      * @return \Illuminate\Http\Response
      */
     public function show(Documents $documents)
@@ -52,7 +52,7 @@ class DocumentsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Documents  $documents
+     * @param  \poc\Documents  $documents
      * @return \Illuminate\Http\Response
      */
     public function edit(Documents $documents)
@@ -64,7 +64,7 @@ class DocumentsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Documents  $documents
+     * @param  \poc\Documents  $documents
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Documents $documents)
@@ -75,7 +75,7 @@ class DocumentsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Documents  $documents
+     * @param  \poc\Documents  $documents
      * @return \Illuminate\Http\Response
      */
     public function destroy(Documents $documents)

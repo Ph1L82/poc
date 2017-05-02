@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace poc\Http\Controllers;
 
-use App\Providers;
+use poc\Providers;
 use Illuminate\Http\Request;
 
 class ProvidersController extends Controller
@@ -41,7 +41,7 @@ class ProvidersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Providers  $providers
+     * @param  \poc\Providers  $providers
      * @return \Illuminate\Http\Response
      */
     public function show(Providers $providers)
@@ -52,7 +52,7 @@ class ProvidersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Providers  $providers
+     * @param  \poc\Providers  $providers
      * @return \Illuminate\Http\Response
      */
     public function edit(Providers $providers)
@@ -64,7 +64,7 @@ class ProvidersController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Providers  $providers
+     * @param  \poc\Providers  $providers
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Providers $providers)
@@ -75,7 +75,7 @@ class ProvidersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Providers  $providers
+     * @param  \poc\Providers  $providers
      * @return \Illuminate\Http\Response
      */
     public function destroy(Providers $providers)

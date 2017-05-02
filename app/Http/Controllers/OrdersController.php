@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace poc\Http\Controllers;
 
-use App\Orders;
+use poc\Orders;
 use Illuminate\Http\Request;
 
 class OrdersController extends Controller
@@ -41,7 +41,7 @@ class OrdersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Orders  $orders
+     * @param  \poc\Orders  $orders
      * @return \Illuminate\Http\Response
      */
     public function show(Orders $orders)
@@ -52,7 +52,7 @@ class OrdersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Orders  $orders
+     * @param  \poc\Orders  $orders
      * @return \Illuminate\Http\Response
      */
     public function edit(Orders $orders)
@@ -64,7 +64,7 @@ class OrdersController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Orders  $orders
+     * @param  \poc\Orders  $orders
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Orders $orders)
@@ -75,7 +75,7 @@ class OrdersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Orders  $orders
+     * @param  \poc\Orders  $orders
      * @return \Illuminate\Http\Response
      */
     public function destroy(Orders $orders)
